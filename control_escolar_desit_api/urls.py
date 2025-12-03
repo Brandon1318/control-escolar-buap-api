@@ -13,7 +13,8 @@ from control_escolar_desit_api.views import materias
 #definimos las EndPoints para las conexiones front con back
 urlpatterns = [
     #URL Admin
-    path('admin/', users.AdminView.as_view()),
+    path('admin/', admin.site.urls),
+    #path('admin/', users.AdminView.as_view()),
     #URL data
     path('lista-admins/', users.AdminAll.as_view()),
     #Edit Admim
