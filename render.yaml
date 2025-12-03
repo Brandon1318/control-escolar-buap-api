@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: desit-backend
+    env: python
+    region: oregon
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn control_escolar_desit_api.wsgi:application"
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: nombreProyecto.settings
